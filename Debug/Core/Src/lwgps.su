@@ -1,0 +1,10 @@
+../Core/Src/lwgps.c:71:1:prv_parse_number	24	static
+../Core/Src/lwgps.c:94:1:prv_parse_float_number	24	static
+../Core/Src/lwgps.c:119:1:prv_parse_lat_long	40	static
+../Core/Src/lwgps.c:136:1:prv_parse_term	16	static
+../Core/Src/lwgps.c:362:1:prv_check_crc	24	static
+../Core/Src/lwgps.c:377:1:prv_copy_from_tmp_memory	16	static
+../Core/Src/lwgps.c:438:1:lwgps_init	16	static
+../Core/Src/lwgps.c:456:1:lwgps_process	32	static
+../Core/Src/lwgps.c:505:1:lwgps_distance_bearing	88	static
+../Core/Src/lwgps.c:578:1:lwgps_to_speed	24	static
