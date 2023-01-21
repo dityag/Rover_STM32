@@ -41,13 +41,13 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_macro  0002cd87  00000000  00000000  00047838  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   0001cac5  00000000  00000000  000745bf  2**0
+ 19 .debug_line   0001cabf  00000000  00000000  000745bf  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    0010754e  00000000  00000000  00091084  2**0
+ 20 .debug_str    0010754e  00000000  00000000  0009107e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .comment      00000050  00000000  00000000  001985d2  2**0
+ 21 .comment      00000050  00000000  00000000  001985cc  2**0
                   CONTENTS, READONLY
- 22 .debug_frame  00006c44  00000000  00000000  00198624  2**2
+ 22 .debug_frame  00006c44  00000000  00000000  0019861c  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -1192,11 +1192,10 @@ void StartTask01(void *argument)
  8000c92:	b082      	sub	sp, #8
  8000c94:	af00      	add	r7, sp, #0
  8000c96:	6078      	str	r0, [r7, #4]
+  /* USER CODE BEGIN StartTask01 */
+  /* Infinite loop */
+  for(;;)
   {
-//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
-//	  osDelay(5);
-//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
-//	  osDelay(5);
 	  latitude_gps = gps.latitude;
  8000c98:	4b09      	ldr	r3, [pc, #36]	; (8000cc0 <StartTask01+0x30>)
  8000c9a:	ed93 7b00 	vldr	d7, [r3]
@@ -1229,11 +1228,10 @@ void StartTask02(void *argument)
  8000cce:	b082      	sub	sp, #8
  8000cd0:	af00      	add	r7, sp, #0
  8000cd2:	6078      	str	r0, [r7, #4]
+  /* USER CODE BEGIN StartTask02 */
+  /* Infinite loop */
+  for(;;)
   {
-//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
-//	  osDelay(20);
-//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
-//	  osDelay(20);
     osDelay(1);
  8000cd4:	2001      	movs	r0, #1
  8000cd6:	f005 f9ed 	bl	80060b4 <osDelay>
@@ -1250,11 +1248,10 @@ void StartTask03(void *argument)
  8000cde:	b082      	sub	sp, #8
  8000ce0:	af00      	add	r7, sp, #0
  8000ce2:	6078      	str	r0, [r7, #4]
+  /* USER CODE BEGIN StartTask03 */
+  /* Infinite loop */
+  for(;;)
   {
-//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
-//	  osDelay(140);
-//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
-//	  osDelay(140);
     osDelay(1);
  8000ce4:	2001      	movs	r0, #1
  8000ce6:	f005 f9e5 	bl	80060b4 <osDelay>
