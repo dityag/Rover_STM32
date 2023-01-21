@@ -186,9 +186,9 @@ void StartTask01(void *argument)
   for(;;)
   {
 //	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_SET);
-//    osDelay(5);
-//    HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
-//    osDelay(5);
+//	  osDelay(5);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_0, GPIO_PIN_RESET);
+//	  osDelay(5);
 	  latitude_gps = gps.latitude;
 	  longitude_gps = gps.longitude;
     osDelay(1);
@@ -209,10 +209,10 @@ void StartTask02(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
-	      osDelay(20);
-	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
-	      osDelay(20);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_RESET);
+//	  osDelay(20);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_7, GPIO_PIN_SET);
+//	  osDelay(20);
     osDelay(1);
   }
   /* USER CODE END StartTask02 */
@@ -231,10 +231,10 @@ void StartTask03(void *argument)
   /* Infinite loop */
   for(;;)
   {
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
-	      osDelay(140);
-	      HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
-	      osDelay(140);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_SET);
+//	  osDelay(140);
+//	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_14, GPIO_PIN_RESET);
+//	  osDelay(140);
     osDelay(1);
   }
   /* USER CODE END StartTask03 */
