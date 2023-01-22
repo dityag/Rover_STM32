@@ -44,7 +44,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../Core/Inc/eth.h ../Core/Inc/main.h ../Core/Inc/usart.h \
  ../Core/Inc/usb_otg.h ../Core/Inc/gpio.h ../Core/Inc/lwgps/lwgps.h \
- ../Core/Inc/lwgps/lwgps_opt.h ../Core/Inc/lwgps/lwgps_opts.h
+ ../Core/Inc/lwgps/lwgps_opt.h ../Core/Inc/lwgps/lwgps_opts.h \
+ ../Core/Inc/map.h ../Core/Inc/pid.h
 ../Core/Inc/main.h:
 ../Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h:
 ../Core/Inc/stm32f7xx_hal_conf.h:
@@ -97,3 +98,5 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Core/Inc/lwgps/lwgps.h:
 ../Core/Inc/lwgps/lwgps_opt.h:
 ../Core/Inc/lwgps/lwgps_opts.h:
+../Core/Inc/map.h:
+../Core/Inc/pid.h:

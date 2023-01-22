@@ -27,6 +27,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "lwgps/lwgps.h"
+#include "map.h"
+#include "pid.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -36,6 +38,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -55,6 +58,9 @@ uint8_t rx_index = 0;
 uint8_t rx_data = 0;
 float latitude_gps;
 float longitude_gps;
+
+//=============HC-05 BLUETOOTH VARIABLE=============
+uint8_t bt_rx_buffer[13];
 
 /* USER CODE END PV */
 
@@ -116,9 +122,11 @@ int main(void)
   MX_UART5_Init();
   MX_USART3_UART_Init();
   MX_USB_OTG_FS_PCD_Init();
+  MX_UART4_Init();
   /* USER CODE BEGIN 2 */
   lwgps_init(&gps);
   HAL_UART_Receive_IT(&huart5, &rx_data, 1);
+  HAL_UART_Receive_IT(&huart4, (uint8_t*) &bt_rx_buffer, sizeof(bt_rx_buffer));
   /* USER CODE END 2 */
 
   /* Init scheduler */

@@ -33,6 +33,8 @@
 #include "usart.h"
 #include "usb_otg.h"
 #include "lwgps/lwgps.h"
+#include "map.h"
+#include "pid.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -61,6 +63,10 @@ extern uint8_t rx_index;
 extern uint8_t rx_data;
 extern float latitude_gps;
 extern float longitude_gps;
+
+//=============HC-05 BLUETOOTH VARIABLE=============
+extern uint8_t bt_rx_buffer[13];
+
 
 /* USER CODE END Variables */
 /* Definitions for Task01 */
@@ -182,11 +188,12 @@ void MX_FREERTOS_Init(void) {
 void StartTask01(void *argument)
 {
   /* USER CODE BEGIN StartTask01 */
+
   /* Infinite loop */
   for(;;)
   {
-	  latitude_gps = gps.latitude;
-	  longitude_gps = gps.longitude;
+	latitude_gps = gps.latitude;
+	longitude_gps = gps.longitude;
     osDelay(1);
   }
   /* USER CODE END StartTask01 */
@@ -205,6 +212,11 @@ void StartTask02(void *argument)
   /* Infinite loop */
   for(;;)
   {
+	HAL_UART_Receive_IT(&huart4, (uint8_t*) &bt_rx_buffer, sizeof(bt_rx_buffer));
+
+	if (bt_rx_buffer[0] == 'A' && bt_rx_buffer[11] == 'B'){
+
+	}
     osDelay(1);
   }
   /* USER CODE END StartTask02 */

@@ -44,7 +44,8 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
  ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
  ../Core/Inc/eth.h ../Core/Inc/main.h ../Core/Inc/usart.h \
  ../Core/Inc/usb_otg.h ../Core/Inc/lwgps/lwgps.h \
- ../Core/Inc/lwgps/lwgps_opt.h ../Core/Inc/lwgps/lwgps_opts.h
+ ../Core/Inc/lwgps/lwgps_opt.h ../Core/Inc/lwgps/lwgps_opts.h \
+ ../Core/Inc/map.h ../Core/Inc/pid.h
 ../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 ../Core/Inc/FreeRTOSConfig.h:
 ../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -96,3 +97,5 @@ Core/Src/freertos.o: ../Core/Src/freertos.c \
 ../Core/Inc/lwgps/lwgps.h:
 ../Core/Inc/lwgps/lwgps_opt.h:
 ../Core/Inc/lwgps/lwgps_opts.h:
+../Core/Inc/map.h:
+../Core/Inc/pid.h:
